@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  h1= title
+  form(name='add-blog' method='POST' action='/blogs')
+    p Title:
+      input(type='text' placeholder='Title' name='title')
+    p Body:
+      textarea(placeholder='Write your blog' name='content')
+    p
+      button(type='submit') Add blog post
+
+  a(href='/') Back to home

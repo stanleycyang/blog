@@ -1,0 +1,12 @@
+extends ../layout.jade
+
+block content
+  div
+    h1= title
+    a(href='/blogs/new') Write a new blog
+    each blog in blogs
+      li
+        h3
+          a(href='blogs/#{blog._id}')= blog.title
+        p= blog.content
+        span= blog.createdAt

@@ -1,0 +1,11 @@
+extends ../layout
+block content
+  h1= title
+  form(method='POST' name='edit-blog' action='/blogs/#{blog._id}?_method=PUT')
+    p Title:
+      input(type='text' name='title' placeholder='Title' value='#{blog.title}')
+    p Content:
+      textarea(name='content' placeholder='Content' value='')= blog.content
+    p
+      button(type='submit') Update blog
+  a(href='/') Back to home
