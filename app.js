@@ -6,7 +6,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override');
 
-mongoose.connect('mongodb://stan:foobar@ds053370.mongolab.com:53370/heroku_app36934007');
+mongoose.connect('INSERT LINK');
 
 var Blog = mongoose.model('Blog', {
   title: String,
